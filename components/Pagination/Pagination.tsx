@@ -13,7 +13,7 @@ export default function Pagination({
 }: PaginationProps) {
   return (
     <nav
-      className="bg-teal-500/30 px-4 py-3 flex flex-col items-center justify-between border-t border-gray-200 sm:px-6"
+      className="bg-teal-500/20 px-4 py-3 flex flex-col items-center justify-between border-t border-gray-200 sm:px-6"
       aria-label="Pagination"
     >
       <div className="hidden sm:block">

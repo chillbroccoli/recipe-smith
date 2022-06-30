@@ -48,19 +48,17 @@ export default function AppContainer() {
   return (
     <div>
       <div className="w-4/5 mx-auto">
-        <div className="w-full py-4 px-4">
-          <h1 className="logo-title text-center text-lg">Recipe Smith</h1>
-        </div>
-
         <SearchInput
           searchQuery={searchQuery}
           handleSearchChange={handleSearchChange}
           handleSubmit={handleSubmit}
         />
 
-        <RecipesGrid recipes={currentRecipes} />
+        {currentRecipes && currentRecipes?.length > 0 && (
+          <RecipesGrid recipes={currentRecipes} />
+        )}
 
-        {currentRecipes.length > 0 && (
+        {currentRecipes && currentRecipes?.length > 0 && (
           <Pagination
             currentPage={currentPage}
             totalPages={totalPages}

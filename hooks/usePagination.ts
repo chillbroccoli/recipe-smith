@@ -11,7 +11,10 @@ export default function usePagination<T>({
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = items?.slice(indexOfFirstItem, indexOfLastItem);
+  const currentItems =
+    items && items?.length > 0
+      ? items.slice(indexOfFirstItem, indexOfLastItem)
+      : [];
   const totalPages = Math.ceil(items?.length / itemsPerPage);
 
   const goToNextPage = () => {

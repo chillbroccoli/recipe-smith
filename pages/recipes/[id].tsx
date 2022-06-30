@@ -23,13 +23,7 @@ export default function RecipeDetails({ details }: RecipeDetailsProps) {
       <Head>
         <title>Recipe | {details.title}</title>
       </Head>
-      <div>
-        <div className="w-full py-4 px-4">
-          <Link href="/">
-            <h1 className="logo-title text-center text-lg">Recipe Smith</h1>
-          </Link>
-        </div>
-
+      <div className="bg-gradient-to-br from-green-500/20 via-emerald-500/20 to-teal-500/20">
         <div>
           <div className="relative w-full h-72">
             <div className="absolute top-0 bottom-0 left-0 right-0 bg-teal-500/30"></div>
